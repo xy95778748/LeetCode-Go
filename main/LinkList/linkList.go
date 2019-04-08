@@ -97,31 +97,77 @@ func getIntersectionNode(headA, headB *ListNode) *ListNode {
 	return cursorA
 }
 
-func removeNthFromEnd(head *ListNode, n int) *ListNode {
+func RemoveNthFromEnd(head *ListNode, n int) *ListNode {
+
+	if head.Next == nil {
+		return nil
+	}
+
 	fast, slow := head, head
 
 	for i := 0; i < n; i++ {
 		fast = fast.Next
 	}
 
+	// 删除第一个元素
 	if fast == nil {
-		return nil
-	} else {
-		for fast != nil {
-			fast = fast.Next
-			slow = slow.Next
-		}
+		return head.Next
 	}
 
-	temp := slow
-	if temp.Next != nil {
-		temp = temp.Next
-	}
-	if temp.Next != nil {
-		temp = temp.Next
+	for fast.Next != nil {
+		fast = fast.Next
+		slow = slow.Next
 	}
 
-	slow.Next = temp
-
+	slow.Next = slow.Next.Next
 	return head
+}
+
+func ReverseList(head *ListNode) *ListNode {
+
+	if head == nil || head.Next == nil {
+		return head
+	}
+
+	newHead := new(ListNode)
+	newHead.Next = nil
+	newHead.Val = head.Val
+
+	tempHead := head.Next
+
+	for tempHead != nil {
+		node := new(ListNode)
+		node.Val = tempHead.Val
+		node.Next = newHead
+		newHead = node
+		tempHead = tempHead.Next
+	}
+	return newHead
+}
+
+func RemoveElements(head *ListNode, val int) *ListNode {
+
+	if head == nil {
+		return head
+	}
+
+	newHead := new(ListNode)
+	temp := head
+	if head.Val == val {
+		temp = temp.Next
+	} else {
+		newHead.Val = temp.Val
+	}
+
+	for temp != nil {
+		if temp.Val == val {
+			continue
+		}
+		h := new(ListNode)
+		h.Val = temp.Val
+		newHead.Next = h
+
+		temp = temp.Next
+	}
+	return newHead
 }
