@@ -147,27 +147,5 @@ func ReverseList(head *ListNode) *ListNode {
 
 func RemoveElements(head *ListNode, val int) *ListNode {
 
-	if head == nil {
-		return head
-	}
-
-	newHead := new(ListNode)
-	temp := head
-	if head.Val == val {
-		temp = temp.Next
-	} else {
-		newHead.Val = temp.Val
-	}
-
-	for temp != nil {
-		if temp.Val == val {
-			continue
-		}
-		h := new(ListNode)
-		h.Val = temp.Val
-		newHead.Next = h
-
-		temp = temp.Next
-	}
-	return newHead
+	return head
 }

@@ -14,9 +14,9 @@ func main() {
 	node5 := new(LinkList.ListNode)
 
 	node1.Val = 10
-	node1.Next = node2
+	node1.Next = nil
 
-	node2.Val = 20
+	node2.Val = 10
 	node2.Next = node3
 
 	node3.Val = 30
