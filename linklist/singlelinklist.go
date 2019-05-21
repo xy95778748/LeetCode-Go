@@ -1,41 +1,22 @@
-package main
+package linklist
 
-import (
-	"fmt"
-)
+/*
+ 链表头 Val = 0
+ 链表头不算链表的元素, 所以 Get(0) AddAtHead() 实际都在this.next
+*/
 
-func (this *MyLinkedList) Log() {
-	temp := this
-	for temp != nil {
-		fmt.Println("value =", temp.Val)
-		temp = temp.Next
-	}
-}
-
-func main() {
-
-	node := MyLinkedList{}
-	node.AddAtHead(1)
-	node.AddAtTail(3)
-	node.AddAtIndex(1, 2)
-	fmt.Println(node.Get(1))
-	node.DeleteAtIndex(1)
-	fmt.Println(node.Get(1))
-	node.Log()
-}
-
-type MyLinkedList struct {
+type SingleList struct {
 	Val  int
-	Next *MyLinkedList
+	Next *SingleList
 }
 
 /** Initialize your data structure here. */
-func Constructor() MyLinkedList {
-	return MyLinkedList{}
+func Constructor() SingleList {
+	return SingleList{}
 }
 
 /** Get the value of the index-th node in the linked list. If the index is invalid, return -1. */
-func (this *MyLinkedList) Get(index int) int {
+func (this *SingleList) Get(index int) int {
 
 	if index < 0 {
 		return -1
@@ -58,27 +39,27 @@ func (this *MyLinkedList) Get(index int) int {
 }
 
 /** Add a node of value val before the first element of the linked list. After the insertion, the new node will be the first node of the linked list. */
-func (this *MyLinkedList) AddAtHead(val int) {
+func (this *SingleList) AddAtHead(val int) {
 	old := this.Next
-	this.Next = &MyLinkedList{
+	this.Next = &SingleList{
 		Val:  val,
 		Next: old,
 	}
 }
 
 /** Append a node of value val to the last element of the linked list. */
-func (this *MyLinkedList) AddAtTail(val int) {
+func (this *SingleList) AddAtTail(val int) {
 	temp := this
 	for temp.Next != nil {
 		temp = temp.Next
 	}
-	temp.Next = &MyLinkedList{
+	temp.Next = &SingleList{
 		Val: val,
 	}
 }
 
 /** Add a node of value val before the index-th node in the linked list. If index equals to the length of linked list, the node will be appended to the end of linked list. If index is greater than the length, the node will not be inserted. */
-func (this *MyLinkedList) AddAtIndex(index int, val int) {
+func (this *SingleList) AddAtIndex(index int, val int) {
 
 	if index < 0 {
 		this.AddAtHead(val)
@@ -92,12 +73,12 @@ func (this *MyLinkedList) AddAtIndex(index int, val int) {
 		p = p.Next
 	}
 	if p.Next == nil {
-		p.Next = &MyLinkedList{
+		p.Next = &SingleList{
 			Val: val,
 		}
 	} else {
 		old := p.Next
-		p.Next = &MyLinkedList{
+		p.Next = &SingleList{
 			Val:  val,
 			Next: old,
 		}
@@ -105,7 +86,7 @@ func (this *MyLinkedList) AddAtIndex(index int, val int) {
 }
 
 /** Delete the index-th node in the linked list, if the index is valid. */
-func (this *MyLinkedList) DeleteAtIndex(index int) {
+func (this *SingleList) DeleteAtIndex(index int) {
 	p := this
 	for i := 1; i <= index; i++ {
 		if p.Next == nil {
