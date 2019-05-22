@@ -1,5 +1,10 @@
 package linklist
 
+type ListNode struct {
+	Val  int
+	Next *ListNode
+}
+
 /*
 	141. 环形链表
 	https://leetcode-cn.com/problems/linked-list-cycle/
@@ -113,4 +118,167 @@ func GetIntersectionNode1(headA, headB *SingleList) *SingleList {
 		tempB = tempB.Next
 	}
 	return nil
+}
+
+/*
+	19. 删除链表的倒数第N个节点
+	https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/
+*/
+func removeNthFromEnd(head *SingleList, n int) *SingleList {
+	if head.Next == nil {
+		return nil
+	}
+
+	fast, slow := head, head
+
+	for i := 0; i < n; i++ {
+		fast = fast.Next
+	}
+
+	if fast == nil {
+		return head.Next
+	}
+
+	for fast.Next != nil {
+		fast = fast.Next
+		slow = slow.Next
+	}
+
+	slow.Next = slow.Next.Next
+	return head
+}
+
+/*
+	206.反转链表
+	https://leetcode-cn.com/problems/reverse-linked-list/submissions/
+*/
+// for循环 时间, 空间复杂度O(n)
+func reverseList(head *SingleList) *SingleList {
+	if head == nil || head.Next == nil {
+		return head
+	}
+
+	new := &SingleList{-1, nil}
+	temp := head
+	for temp != nil {
+		new.Next = &SingleList{temp.Val, new.Next}
+		temp = temp.Next
+	}
+	return new.Next
+}
+
+// 时间O(n), 空间O(1)
+func ReverseList1(head *SingleList) *SingleList {
+	cur := head
+	var pre *SingleList = nil
+	for cur != nil {
+		pre, cur, cur.Next = cur, cur.Next, pre //这句话最重要
+	}
+	return pre
+}
+
+// 递归
+func reverseList2(head *SingleList) *SingleList {
+
+	if head == nil || head.Next == nil {
+		return head
+	}
+	return reverse(nil, head)
+}
+
+func reverse(prev *SingleList, curr *SingleList) *SingleList {
+	if curr == nil {
+		return prev
+	}
+	next := curr.Next
+	curr.Next = prev
+	return reverse(curr, next)
+}
+
+/*
+	328. 奇偶链表
+	https://leetcode-cn.com/problems/odd-even-linked-list/
+*/
+func oddEvenList(head *SingleList) *SingleList {
+
+	if head == nil || head.Next == nil {
+		return head
+	}
+
+	tempHead := head
+	odd, even := tempHead, tempHead.Next
+
+	for even != nil && even.Next != nil {
+		temp := odd.Next
+		odd.Next = even.Next
+		even.Next = even.Next.Next
+		odd.Next.Next = temp
+		odd = odd.Next
+		even = even.Next
+	}
+	return head
+}
+
+/*
+	876. 链表的中间结点
+	https://leetcode-cn.com/problems/middle-of-the-linked-list/comments/
+*/
+func middleNode(head *SingleList) *SingleList {
+	fast, slow := head, head
+	for fast != nil && fast.Next != nil {
+		fast = fast.Next.Next
+		slow = slow.Next
+	}
+	return slow
+}
+
+/*
+	234. 回文链表
+	https://leetcode-cn.com/problems/palindrome-linked-list/
+*/
+func isPalindrome(head *SingleList) bool {
+	if head == nil || head.Next == nil {
+		return true
+	}
+
+	mid := middleNode(head)  // 找中点
+	end := ReverseList1(mid) // 反转后半段
+
+	for head != nil && end != nil {
+		if head.Val == end.Val {
+			head, end = head.Next, end.Next
+		} else {
+			return false
+		}
+	}
+	return true
+}
+
+/*
+	237. 删除链表中的节点
+	https://leetcode-cn.com/problems/delete-node-in-a-linked-list/
+*/
+
+func deleteNode(node *ListNode) {
+	node.Val = node.Next.Val
+	node.Next = node.Next.Next
+}
+
+func MergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
+
+	head1, head2 := l1, l2
+	newHead := &ListNode{}
+	result := newHead
+	index := 1
+	for head1.Next != nil && head2.Next != nil {
+		if index%2 == 1 {
+			newHead.Next = head1
+			head1, newHead = head1, newHead.Next
+		} else {
+			newHead.Next = head2
+			head2, newHead = head2.Next, newHead.Next
+		}
+		index++
+	}
+	return result
 }

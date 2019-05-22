@@ -1,5 +1,7 @@
 package linklist
 
+import "fmt"
+
 /*
  链表头 Val = 0
  链表头不算链表的元素, 所以 Get(0) AddAtHead() 实际都在this.next
@@ -98,4 +100,13 @@ func (this *SingleList) DeleteAtIndex(index int) {
 		return
 	}
 	p.Next = p.Next.Next
+}
+
+func (this *SingleList) Foreach() {
+
+	head := this
+	for head != nil {
+		fmt.Println("value =", head.Val)
+		head = head.Next
+	}
 }

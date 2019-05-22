@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6a795aa-5864-4504-a889-946186cc7ae0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/linklist/algorithms.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/linklist/description.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/DoubleLinkList/doulelinklist.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/algorithms.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/LinkList/linkList.go" beforeDir="false" afterPath="$PROJECT_DIR$/linklist/singlelinklist.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/linklist/algorithms.go" beforeDir="false" afterPath="$PROJECT_DIR$/linklist/algorithms.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/linklist/singlelinklist.go" beforeDir="false" afterPath="$PROJECT_DIR$/linklist/singlelinklist.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main/main.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,11 +33,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="126" selection-start-line="26" selection-end-line="126" />
+            <state relative-caret-position="225">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
               <folding>
-                <element signature="e#14#70#0" expanded="true" />
+                <element signature="e#14#55#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/string/algorithms.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="4" column="75" selection-start-line="4" selection-start-column="75" selection-end-line="4" selection-end-column="75" />
             </state>
           </provider>
         </entry>
@@ -68,20 +76,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/linklist/singlelinklist.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1911">
-              <caret line="88" column="24" selection-start-line="88" selection-start-column="24" selection-end-line="88" selection-end-column="24" />
+            <state relative-caret-position="2415">
+              <caret line="112" lean-forward="true" selection-start-line="112" selection-end-line="112" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/linklist/algorithms.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="16" selection-start-column="16" selection-end-column="16" />
+            <state relative-caret-position="299">
+              <caret line="280" selection-start-line="280" selection-end-line="280" />
             </state>
           </provider>
         </entry>
@@ -135,9 +143,10 @@
         <option value="$PROJECT_DIR$/main/LinkList/linkList.go" />
         <option value="$PROJECT_DIR$/linklist/singlelinklist/description.md" />
         <option value="$PROJECT_DIR$/linklist/singlelinklist/singlelinklist.go" />
-        <option value="$PROJECT_DIR$/linklist/algorithms.go" />
-        <option value="$PROJECT_DIR$/main/main.go" />
+        <option value="$PROJECT_DIR$/string/algorithms.go" />
         <option value="$PROJECT_DIR$/linklist/singlelinklist.go" />
+        <option value="$PROJECT_DIR$/main/main.go" />
+        <option value="$PROJECT_DIR$/linklist/algorithms.go" />
       </list>
     </option>
   </component>
@@ -170,6 +179,11 @@
               <item name="LeetCode-Go" type="b2602c69:ProjectViewProjectNode" />
               <item name="LeetCode-Go" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LeetCode-Go" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LeetCode-Go" type="462c0819:PsiDirectoryNode" />
+              <item name="string" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -237,15 +251,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="834" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28540772" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28540772" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2991914" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.41239893" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.29380053" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.44878706" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32884097" />
@@ -306,7 +319,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="环形链表 算法" />
-    <option name="LAST_COMMIT_MESSAGE" value="环形链表 算法" />
+    <MESSAGE value="单链表" />
+    <MESSAGE value="leetCode算法" />
+    <option name="LAST_COMMIT_MESSAGE" value="leetCode算法" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -320,6 +335,12 @@
           <url>file://$PROJECT_DIR$/main/DoubleLinkList/doulelinklist.go</url>
           <line>61</line>
           <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/linklist/algorithms.go</url>
+          <line>272</line>
+          <properties />
+          <option name="timeStamp" value="56" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -361,13 +382,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/linklist/algorithms.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="16" selection-start-column="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/DoubleLinkList/doulelinklist.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="624">
@@ -382,20 +396,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/main.go">
+    <entry file="file://$PROJECT_DIR$/string/algorithms.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="126" selection-start-line="26" selection-end-line="126" />
-          <folding>
-            <element signature="e#14#70#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="84">
+          <caret line="4" column="75" selection-start-line="4" selection-start-column="75" selection-end-line="4" selection-end-column="75" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/linklist/singlelinklist.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1911">
-          <caret line="88" column="24" selection-start-line="88" selection-start-column="24" selection-end-line="88" selection-end-column="24" />
+        <state relative-caret-position="2415">
+          <caret line="112" lean-forward="true" selection-start-line="112" selection-end-line="112" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#14#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/linklist/algorithms.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="280" selection-start-line="280" selection-end-line="280" />
         </state>
       </provider>
     </entry>
