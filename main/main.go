@@ -1,21 +1,13 @@
 package main
 
 import (
-	"LeetCode-Go/linklist"
+	"LeetCode-Go/Array"
 	"fmt"
 )
 
 func main() {
 
-	node13 := &linklist.ListNode{4, nil}
-	node12 := &linklist.ListNode{2, node13}
-	node11 := &linklist.ListNode{1, node12}
-
-	node23 := &linklist.ListNode{4, nil}
-	node22 := &linklist.ListNode{3, node23}
-	node21 := &linklist.ListNode{1, node22}
-
-	result := linklist.MergeTwoLists(node11, node21)
-
+	array := []int{4, 3, 2, 7, 8, 2, 3, 1}
+	result := Array.FindDuplicates(array)
 	fmt.Println(result)
 }
